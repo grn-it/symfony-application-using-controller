@@ -150,6 +150,22 @@ class NewsValueResolver implements ArgumentValueResolverInterface
 }
 ```
 
+## Routes
+```
+/app # symfony console debug:router
+ ---------------- -------- -------- ------ -------------------------------- 
+  Name             Method   Scheme   Host   Path                            
+ ---------------- -------- -------- ------ -------------------------------- 
+  news_item_html   GET      ANY      ANY    /mass-media/news/{id}           
+  news_list_html   GET      ANY      ANY    /mass-media/news                
+  _preview_error   ANY      ANY      ANY    /_error/{code}.{_format}        
+  news_list        GET      ANY      ANY    /mass-media/resource/news       
+  news_item        GET      ANY      ANY    /mass-media/resource/news/{id}  
+  news_add         POST     ANY      ANY    /mass-media/resource/news       
+  news_remove      DELETE   ANY      ANY    /mass-media/resource/news/{id}  
+ ---------------- -------- -------- ------ --------------------------------
+```
+
 ## Resources
 - [Controllers for Resources, Services and Web Pages in a Symfony Application](https://web-mastering.blogspot.com/2022/09/Controllers-for-Resources-Services-and-Web-Pages-in-a-Symfony-Application.html)
 - [Symfony Docs: Controllers](https://symfony.com/doc/current/controller.html)
