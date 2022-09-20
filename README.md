@@ -10,6 +10,11 @@ The `News` web page controller is made using the [ADR](https://en.wikipedia.org/
 
 An [Argument Resolver](https://symfony.com/doc/current/controller/argument_value_resolver.html) has been added to define the `News` entity in controller actions.
 
+## Install
+```
+docker-compose exec symfony-web-application make install uid=$(id -u)
+```
+
 ## News resource controller
 ```php
 #[Route('/mass-media/resource/')]
