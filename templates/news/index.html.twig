@@ -1,0 +1,6 @@
+<h1>List of news</h1>
+
+{% for item in news %}
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.text }}</p>
+{% endfor %}

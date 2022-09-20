@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  symfony-web-application:
+    build:
+      context: .
+      target: symfony-web-application
+    volumes:
+      - .:/app
+    stop_grace_period: 0s
+    ports:
+      - 8000:8000
+
+volumes:
+###> doctrine/doctrine-bundle ###
+  db-data:
+###< doctrine/doctrine-bundle ###
